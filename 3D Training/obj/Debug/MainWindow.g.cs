@@ -100,6 +100,14 @@ namespace _3D_Training {
             return;
             case 3:
             
+            #line 106 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).PreviewMouseUp += new System.Windows.Input.MouseButtonEventHandler(this.MinimizeWindow);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            
             #line 111 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).PreviewMouseUp += new System.Windows.Input.MouseButtonEventHandler(this.CloseWindow);
             

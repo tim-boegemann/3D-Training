@@ -5,8 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3D_Training"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow"
+        Height="1050"
+        Width="1650"
+        WindowStyle="None"
+        BorderThickness="0"
+        Background="#2E3440" 
+        FontFamily="Inter">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" 
+                    Value="#D8DEE9" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+        </Style>
+
+        <Style TargetType="Button" x:Key="TitleButtonStyle">
+            <Setter Property="BorderThickness"
+                Value="0"/>
+            <Setter Property="Height"
+                Value="30" />
+            <Setter Property="Width"
+                Value="30" />
+            <Setter Property="Foreground"
+                    Value="#D8DEE9" />
+            <Setter Property="Background"
+                    Value="#2E3440" />
+        </Style>
         
-    </Grid>
+        <Style TargetType="Button" x:Key="MenubuttonStyle">
+            <Setter Property="BorderThickness"
+                Value="0"/>
+            <Setter Property="Background"
+                Value="#4C566A"/>
+            <Setter Property="Height"
+                    Value="50" />
+            <Setter Property="Foreground"
+                    Value="#D8DEE9" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2E3440" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel Name="OverallDock"
+        HorizontalAlignment="Stretch" 
+        VerticalAlignment="Stretch">
+
+        <Grid DockPanel.Dock="Top" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"
+            Height="30">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel 
+                Grid.Column="0" 
+                HorizontalAlignment="Stretch">
+                <TextBlock 
+                    Name="TitleText"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center" 
+                    Width="Auto"
+                    Text="3D Training" 
+                    FontSize="25" 
+                    MouseDown="DragWindow" />
+            </StackPanel>
+
+            <StackPanel 
+                Grid.Column="1" 
+                Orientation="Horizontal" 
+                Height="30">
+                <Button 
+                    Content="x" 
+                    Style="{StaticResource TitleButtonStyle}" 
+                    Background="#BF616A" 
+                    PreviewMouseUp="CloseWindow" />
+            </StackPanel> 
+        </Grid>
+
+        <StackPanel
+            DockPanel.Dock="Left" 
+            Orientation="Vertical" 
+            Width="200" 
+            Background="#4C566A" 
+            CanVerticallyScroll="True">
+            
+            <Button Content="Import" Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+            <Separator Margin="5,2" Background="#434C5E"/>
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test" Style="{StaticResource MenubuttonStyle}" />
+        </StackPanel>
+
+        <StackPanel 
+            DockPanel.Dock="Right" 
+            Orientation="Vertical" 
+            VerticalAlignment="Stretch">
+            <TextBlock Text="Here goes the Viewer"/>
+        </StackPanel>
+    </DockPanel>
 </Window>

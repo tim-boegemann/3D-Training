@@ -1,0 +1,15 @@
+E:\develop\3D Training\3D Training\bin\Debug\3D Training.exe.config
+E:\develop\3D Training\3D Training\bin\Debug\3D Training.exe
+E:\develop\3D Training\3D Training\bin\Debug\3D Training.pdb
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.csprojAssemblyReference.cache
+E:\develop\3D Training\3D Training\obj\Debug\MainWindow.g.cs
+E:\develop\3D Training\3D Training\obj\Debug\App.g.cs
+E:\develop\3D Training\3D Training\obj\Debug\3D Training_MarkupCompile.cache
+E:\develop\3D Training\3D Training\obj\Debug\3D Training_MarkupCompile.lref
+E:\develop\3D Training\3D Training\obj\Debug\MainWindow.baml
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.g.resources
+E:\develop\3D Training\3D Training\obj\Debug\_3D_Training.Properties.Resources.resources
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.csproj.GenerateResource.cache
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.csproj.CoreCompileInputs.cache
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.exe
+E:\develop\3D Training\3D Training\obj\Debug\3D Training.pdb
