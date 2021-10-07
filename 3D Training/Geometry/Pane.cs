@@ -3,7 +3,7 @@ using System.Windows.Media.Media3D;
 
 namespace _3D_Training.Geometry
 {
-    public class Pane : BasicGeometry
+    public sealed class Pane : BasicGeometry
     {
         public Pane(double width, double height)
         {
@@ -31,7 +31,7 @@ namespace _3D_Training.Geometry
                 new Vector3D(0,0,-1),
             };
 
-            TextureCoordinates = new Point[] 
+            TextureCoordinates = new Point[]
             {
                 new Point(1,0),
                 new Point(1,1),

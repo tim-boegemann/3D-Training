@@ -15,7 +15,7 @@
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
     </WindowChrome.WindowChrome>
-        
+
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground"
@@ -72,7 +72,7 @@
 
     <DockPanel Name="OverallDock"
         HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch">
+        VerticalAlignment="Stretch" >
 
         <Grid DockPanel.Dock="Top"
             HorizontalAlignment="Stretch"
@@ -117,32 +117,38 @@
             CanVerticallyScroll="True"
             Margin="5,5,0,5">
 
-            <Button Content="Import" 
-                    Style="{StaticResource MenubuttonStyle}" 
+            <Button Content="Import"
+                    Style="{StaticResource MenubuttonStyle}"
                     PreviewMouseUp="ImportFile" />
-            <Button Content="Test" 
+            <Button Content="Test"
                     Style="{StaticResource MenubuttonStyle}" />
-            <Button Content="Test" 
+            <Button Content="Test"
+                    Style="{StaticResource MenubuttonStyle}" />
+
+            <Separator Margin="5,2" Background="#434C5E" />
+
+            <Button Content="Test"
+                    Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test"
+                    Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test"
+                    Style="{StaticResource MenubuttonStyle}" />
+            <Button Content="Test"
                     Style="{StaticResource MenubuttonStyle}" />
             
             <Separator Margin="5,2" Background="#434C5E" />
-            
-            <Button Content="Test" 
-                    Style="{StaticResource MenubuttonStyle}" />
-            <Button Content="Test" 
-                    Style="{StaticResource MenubuttonStyle}" />
-            <Button Content="Test" 
-                    Style="{StaticResource MenubuttonStyle}" />
-            <Button Content="Test" 
-                    Style="{StaticResource MenubuttonStyle}" />
+
+            <Label Content="Camera" FontWeight="Bold" HorizontalAlignment="Center"/>
             <Label Content="Zoom" />
-            <Slider Minimum="0" Maximum="40" TickFrequency="4" ValueChanged="ZoomCamera"/>
+            <Slider Minimum="0" Maximum="40" TickFrequency="4" ValueChanged="ZoomCamera" />
+            <Label Content="Horizontal Rotate" />
+            <Slider Minimum="-1.57" Maximum="1.57" Value="0" ValueChanged="HorizontalRotateCamera" />
+            <Label Content="Vertical Rotate" />
+            <Slider Minimum="-1.57" Maximum="1.57" Value="0" ValueChanged="VerticalRotateCamera" />
+            
+            <Separator Margin="5,2" Background="#434C5E" />
         </StackPanel>
 
-        <!--<StackPanel DockPanel.Dock="Right" 
-                    Margin="5"
-                    Background="#D8DEE9" >-->
-            <Viewport3D Name="Viewport" />
-        <!--</StackPanel>-->
+        <Viewport3D Name="Viewport" />
     </DockPanel>
 </Window>

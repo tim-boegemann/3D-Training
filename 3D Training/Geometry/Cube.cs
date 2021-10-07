@@ -3,7 +3,7 @@ using System.Windows.Media.Media3D;
 
 namespace _3D_Training.Geometry
 {
-    public class Cube : BasicGeometry
+    public sealed class Cube : BasicGeometry
     {
         public Cube(double size)
         {

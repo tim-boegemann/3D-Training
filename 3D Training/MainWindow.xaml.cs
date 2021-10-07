@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using _3D_Training.FileImporter;
+using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media.Media3D;
 
 namespace _3D_Training
 {
@@ -31,11 +31,28 @@ namespace _3D_Training
                 Close();
         }
 
-        private void ImportFile(object sender, MouseButtonEventArgs eventArgs) => FileImportManager.ImportFile();
+        private void ImportFile(object sender, MouseButtonEventArgs eventArgs)
+        {
+            var stream = FileImportManager.ImportFile();
+            if (stream != null)
+                _scene.AddToScene(ObjParser.ParseIntoGeometryModel(stream));
+        }
 
         private void ZoomCamera(object sender, RoutedPropertyChangedEventArgs<double> eventArgs)
         {
             _scene.ZoomCameraAlongLookDirection(eventArgs.NewValue);
+            Viewport.InvalidateVisual();
+        }
+
+        private void HorizontalRotateCamera(object sender, RoutedPropertyChangedEventArgs<double> eventArgs)
+        {
+            _scene.PanCameraHorizontal(eventArgs.NewValue);
+            Viewport.InvalidateVisual();
+        }
+
+        private void VerticalRotateCamera(object sender, RoutedPropertyChangedEventArgs<double> eventArgs)
+        {
+            _scene.PanCameraVertical(eventArgs.NewValue);
             Viewport.InvalidateVisual();
         }
     }
