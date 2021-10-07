@@ -5,7 +5,6 @@ E:\develop\3D Training\3D Training\obj\Debug\3D Training.csprojAssemblyReference
 E:\develop\3D Training\3D Training\obj\Debug\MainWindow.g.cs
 E:\develop\3D Training\3D Training\obj\Debug\App.g.cs
 E:\develop\3D Training\3D Training\obj\Debug\3D Training_MarkupCompile.cache
-E:\develop\3D Training\3D Training\obj\Debug\3D Training_MarkupCompile.lref
 E:\develop\3D Training\3D Training\obj\Debug\MainWindow.baml
 E:\develop\3D Training\3D Training\obj\Debug\3D Training.g.resources
 E:\develop\3D Training\3D Training\obj\Debug\_3D_Training.Properties.Resources.resources

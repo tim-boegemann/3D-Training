@@ -27,6 +27,7 @@ namespace _3D_Training
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
                         fileContent = reader.ReadToEnd();
+                        var sS = "";
                     }
                 }
             }

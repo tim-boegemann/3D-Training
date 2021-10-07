@@ -9,12 +9,14 @@ namespace _3D_Training
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Scene _scene;
+
         public MainWindow()
         {
             InitializeComponent();
-            var scene = new Scene(Viewport);
-            Viewport.BeginInit();
-            Viewport.EndInit();
+            _scene = new Scene(Viewport);
+            _scene.CreateDefaultScene();
+            Viewport.InvalidateVisual();
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs eventArgs)
@@ -30,5 +32,11 @@ namespace _3D_Training
         }
 
         private void ImportFile(object sender, MouseButtonEventArgs eventArgs) => FileImportManager.ImportFile();
+
+        private void ZoomCamera(object sender, RoutedPropertyChangedEventArgs<double> eventArgs)
+        {
+            _scene.ZoomCameraAlongLookDirection(eventArgs.NewValue);
+            Viewport.InvalidateVisual();
+        }
     }
 }
