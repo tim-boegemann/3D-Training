@@ -12,33 +12,48 @@ namespace _3D_Training.Geometry
                 new Point3D(-width/2, -height/2, 0),
                 new Point3D(width/2, -height/2, 0),
                 new Point3D(width/2, height/2, 0),
-                new Point3D(-width/2, height/2, 0)
+                new Point3D(-width/2, height/2, 0),
+
+                new Point3D(-width/2, -height/2, 2),
+                new Point3D(width/2, -height/2, 2),
+                new Point3D(width/2, height/2, 2),
+                new Point3D(-width/2, height/2, 2)
             };
 
             TriangleIndices = new int[]
             {
-                0,2,1,
-                0,3,2
+                0, 2, 1,
+                0, 3, 2,
+
+                7,6,4,
+                6,5,4
             };
 
             Normals = new Vector3D[]
             {
-                new Vector3D(0,0,-1),
-                new Vector3D(0,0,-1),
-                new Vector3D(0,0,-1),
-                new Vector3D(0,0,-1),
-                new Vector3D(0,0,-1),
-                new Vector3D(0,0,-1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
+                new Vector3D(0, 0, -1),
             };
 
             TextureCoordinates = new Point[]
             {
-                new Point(1,0),
-                new Point(1,1),
-                new Point(0,1),
-                new Point(0,1),
-                new Point(0,0),
-                new Point(1,0),
+                new Point(1, 0),
+                new Point(1, 1),
+                new Point(0, 1),
+                new Point(0, 1),
+                new Point(0, 0),
+                new Point(1, 0),
             };
         }
     }

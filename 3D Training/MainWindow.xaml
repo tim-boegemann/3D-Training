@@ -140,11 +140,11 @@
 
             <Label Content="Camera" FontWeight="Bold" HorizontalAlignment="Center"/>
             <Label Content="Zoom" />
-            <Slider Minimum="0" Maximum="40" TickFrequency="4" ValueChanged="ZoomCamera" />
+            <Slider Minimum="0" Maximum="1" TickFrequency="0.1" ValueChanged="ZoomCamera" />
             <Label Content="Horizontal Rotate" />
-            <Slider Minimum="-1.57" Maximum="1.57" Value="0" ValueChanged="HorizontalRotateCamera" />
+            <Slider Minimum="0" Maximum="3.14" Value="0" ValueChanged="HorizontalRotateCamera" />
             <Label Content="Vertical Rotate" />
-            <Slider Minimum="-1.57" Maximum="1.57" Value="0" ValueChanged="VerticalRotateCamera" />
+            <Slider Minimum="0" Maximum="6.28" Value="0" ValueChanged="VerticalRotateCamera" />
             
             <Separator Margin="5,2" Background="#434C5E" />
         </StackPanel>
