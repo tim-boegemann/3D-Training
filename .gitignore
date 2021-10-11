@@ -22,10 +22,11 @@
 mono_crash.*
 
 # exclude debug folder
-!3D Training\bin\Debug\*
+3D Training/bin/*
+3D Training/obj/*
 
 # exclude .vs Folder
-!.vs\*
+.vs\*
 
 # Build results
 [Dd]ebug/
@@ -574,4 +575,3 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,visualstudio
-.vs/3D Training/v16/.suo
